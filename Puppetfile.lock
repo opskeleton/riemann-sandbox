@@ -1,0 +1,37 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    maestrodev/wget (1.4.1)
+    puppetlabs/apt (1.4.2)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/gcc (0.1.0)
+    puppetlabs/java (1.1.1)
+      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/stdlib (4.2.1)
+    stahnma/epel (0.0.6)
+
+GIT
+  remote: git://github.com/garethr/garethr-riemann.git
+  ref: master
+  sha: ab0d2508ba5be6cbffe47e88fb185c14c6378cc5
+  specs:
+    garethr/riemann (0.5.3)
+      maestrodev/wget (>= 0)
+      puppetlabs/gcc (>= 0)
+      puppetlabs/java (>= 0)
+      puppetlabs/stdlib (>= 0)
+      stahnma/epel (>= 0)
+
+GIT
+  remote: git://github.com/mstrauss/puppet-editfile.git
+  ref: master
+  sha: 884efdc0997af667f24625e696630e6b1db5a952
+  specs:
+    mstrauss/editfile (0.0.1)
+
+DEPENDENCIES
+  garethr/riemann (>= 0)
+  mstrauss/editfile (>= 0)
+  puppetlabs/apt (>= 0)
+  puppetlabs/stdlib (>= 0)
+
