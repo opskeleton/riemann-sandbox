@@ -7,7 +7,7 @@ node 'riemann.local' {
 
   class { 'riemann::dash':
     host  => '0.0.0.0',
-  } ->
+  }
 
   class { 'riemann::tools':
   }
