@@ -1,35 +1,46 @@
 FORGE
-  remote: http://forge.puppetlabs.com
+  remote: https://forgeapi.puppetlabs.com
   specs:
-    puppetlabs/apt (2.2.1)
-      puppetlabs/stdlib (< 5.0.0, >= 4.5.0)
-    puppetlabs/stdlib (4.11.0)
+    maestrodev-wget (1.7.3)
+    puppetlabs-apt (2.3.0)
+      puppetlabs-stdlib (< 5.0.0, >= 4.5.0)
+    puppetlabs-gcc (0.3.0)
+      puppetlabs-stdlib (< 5.0.0, >= 2.0.0)
+    puppetlabs-stdlib (4.13.1)
+    stahnma-epel (1.2.2)
+      puppetlabs-stdlib (>= 3.0.0)
 
 GIT
   remote: git://github.com/mstrauss/puppet-editfile.git
   ref: master
   sha: 884efdc0997af667f24625e696630e6b1db5a952
   specs:
-    mstrauss/editfile (0.0.1)
+    mstrauss-editfile (0.0.1)
 
 GIT
   remote: git://github.com/pulling-strings/garethr-riemann.git
   ref: master
   sha: bb787ff7c791ed914978284580e6c532b2a1b081
   specs:
-    garethr/riemann (0.0.1)
+    garethr-riemann (0.6.0)
+      maestrodev-wget (>= 0)
+      puppetlabs-gcc (>= 0)
+      puppetlabs-java (>= 0)
+      puppetlabs-stdlib (>= 4.1.0)
+      stahnma-epel (>= 0.0.6)
 
 GIT
   remote: git://github.com/puppetlabs/puppetlabs-java.git
   ref: master
-  sha: aee0f6bc3f8683fd56dd3d5dce8390965f3a0d89
+  sha: 66671ccf76855edb341c7b961101d9a8ecc38169
   specs:
-    puppetlabs/java (0.0.1)
+    puppetlabs-java (1.6.0)
+      puppetlabs-stdlib (< 5.0.0, >= 2.4.0)
 
 DEPENDENCIES
-  garethr/riemann (>= 0)
-  mstrauss/editfile (>= 0)
-  puppetlabs/apt (>= 0)
-  puppetlabs/java (>= 0)
-  puppetlabs/stdlib (>= 0)
+  garethr-riemann (>= 0)
+  mstrauss-editfile (>= 0)
+  puppetlabs-apt (>= 0)
+  puppetlabs-java (>= 0)
+  puppetlabs-stdlib (>= 0)
 
