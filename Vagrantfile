@@ -1,8 +1,13 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+#
+MIRROR=ENV['MIRROR'] || 'us.archive.ubuntu.com'
+
 update = <<SCRIPT
 if [ ! -f /tmp/up ]; then
-  sudo aptitude update 
+  sudo sed -i.bak "s/us.archive.ubuntu.com/#{MIRROR}/g" /etc/apt/sources.list
+  sudo sed -i.bak '/deb-src/d' /etc/apt/sources.list
+  sudo apt-get update
   touch /tmp/up
 fi
 SCRIPT
@@ -15,7 +20,7 @@ Vagrant.configure("2") do |config|
   device = ENV['VAGRANT_BRIDGE'] || 'eth0'
   pool = ENV['VAGRANT_POOL'] 
 
-  config.vm.box = 'ubuntu-15.10_puppet-3.8.2' 
+  config.vm.box = 'ubuntu-16.04_puppet-3.8.7' 
   config.vm.hostname = 'riemann.local'
 
   config.vm.provider :virtualbox do |vb|
@@ -25,7 +30,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider :libvirt do |domain, override|
     override.vm.network :public_network, :bridge => device , :dev => device
     domain.uri = 'qemu+unix:///system'
-    domain.memory = 2048
+    domain.memory = 4048
     domain.cpus = 2
     domain.storage_pool_name = pool if pool
     override.vm.synced_folder './', '/vagrant', type: 'nfs'
