@@ -20,7 +20,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/garethr-riemann.git
   ref: master
-  sha: bb787ff7c791ed914978284580e6c532b2a1b081
+  sha: 045cb0d37bb21f3d3585c1d5937958fce3d7743b
   specs:
     garethr-riemann (0.6.0)
       maestrodev-wget (>= 0)
