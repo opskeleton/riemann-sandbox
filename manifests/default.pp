@@ -2,6 +2,10 @@ group{ 'puppet': ensure  => present }
 
 node 'riemann.local' {
 
+  Service {
+    provider => systemd
+  }
+
   class{ 'riemann':
   } ->
 
