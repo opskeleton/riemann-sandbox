@@ -6,9 +6,12 @@ FORGE
       puppetlabs-stdlib (< 5.0.0, >= 4.5.0)
     puppetlabs-gcc (0.3.0)
       puppetlabs-stdlib (< 5.0.0, >= 2.0.0)
-    puppetlabs-stdlib (4.13.1)
+    puppetlabs-stdlib (4.14.0)
     stahnma-epel (1.2.2)
       puppetlabs-stdlib (>= 3.0.0)
+    stankevich-python (1.18.2)
+      puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
+      stahnma-epel (< 2.0.0, >= 1.2.2)
 
 GIT
   remote: git://github.com/mstrauss/puppet-editfile.git
@@ -30,9 +33,32 @@ GIT
       stahnma-epel (>= 0.0.6)
 
 GIT
+  remote: git://github.com/pulling-strings/puppet-git.git
+  ref: master
+  sha: 5287b58d3bfcdf740e0eed9409410accd9c20c44
+  specs:
+    strings-git (0.0.1)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-shell.git
+  ref: master
+  sha: 92f59ad87accb1109b5f08fe048d3d07d497de83
+  specs:
+    strings-shell (0.2.0)
+      stankevich-python (>= 1.7.8)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-vim.git
+  ref: master
+  sha: 3d8288c2d8ab0a2738c36e02cb33746a9107460b
+  specs:
+    strings-vim (0.1.0)
+      puppetlabs-stdlib (>= 4.2.0)
+
+GIT
   remote: git://github.com/puppetlabs/puppetlabs-java.git
   ref: master
-  sha: 0b47353d810217601c9002e4f41b499baef48be3
+  sha: 866eae1393a3b2a629be63318768798cc0b2615d
   specs:
     puppetlabs-java (1.6.0)
       puppetlabs-stdlib (< 5.0.0, >= 2.4.0)
@@ -43,4 +69,7 @@ DEPENDENCIES
   puppetlabs-apt (>= 0)
   puppetlabs-java (>= 0)
   puppetlabs-stdlib (>= 0)
+  strings-git (>= 0)
+  strings-shell (>= 0)
+  strings-vim (>= 0)
 
