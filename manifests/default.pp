@@ -1,6 +1,10 @@
 group{ 'puppet': ensure  => present }
 
 node 'riemann.local' {
+  include apt
+  include git
+  include shell
+  include vim
 
   Service {
     provider => systemd

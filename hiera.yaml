@@ -2,7 +2,7 @@
 :backends:
  - yaml
 :logger: console
-:hierarchy:  
+:hierarchy:
  - '%{::virtual}'
  - common
 :yaml:
