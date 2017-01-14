@@ -42,7 +42,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-shell.git
   ref: master
-  sha: 92f59ad87accb1109b5f08fe048d3d07d497de83
+  sha: 652e4eb19bbba2e6263f6539c526f42f93d3739d
   specs:
     strings-shell (0.2.0)
       stankevich-python (>= 1.7.8)
@@ -50,7 +50,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-vim.git
   ref: master
-  sha: 3d8288c2d8ab0a2738c36e02cb33746a9107460b
+  sha: b6877bb1a39f9927c2c46f3a9a804107e86e1c39
   specs:
     strings-vim (0.1.0)
       puppetlabs-stdlib (>= 4.2.0)
@@ -58,7 +58,7 @@ GIT
 GIT
   remote: git://github.com/puppetlabs/puppetlabs-java.git
   ref: master
-  sha: 866eae1393a3b2a629be63318768798cc0b2615d
+  sha: e36f6ce7603d2c14d391d368de171b0828437617
   specs:
     puppetlabs-java (1.6.0)
       puppetlabs-stdlib (< 5.0.0, >= 2.4.0)
